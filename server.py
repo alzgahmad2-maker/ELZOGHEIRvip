@@ -9,6 +9,7 @@ Includes:
 """
 from concurrent.futures import ThreadPoolExecutor, as_completed
 import math
+import os
 import sqlite3
 import time
 from datetime import datetime, timezone, timedelta
@@ -22,6 +23,7 @@ try:
     import yfinance as yf
 except ImportError:
     raise SystemExit("Missing package: pip install yfinance pandas numpy flask flask-cors requests")
+
 app = Flask(__name__)
 CORS(app)
 
@@ -368,6 +370,10 @@ def evaluate_symbol(symbol, tf_key="M1"):
         "timestamp": str(df.index[-1])
     }
 
+@app.route("/")
+def home():
+    return jsonify({"status": "online", "app": "ELZOGHEIR VIP API"}), 200
+
 @app.route("/api/assets")
 def get_assets():
     formatted = [{"name": k, "code": v[0], "flag": v[1]} for k, v in ASSETS_DATA.items()]
@@ -569,8 +575,6 @@ def ollama_bridge():
             return jsonify({"ok": False, "error": f"Ollama status code {response.status_code}"})
     except Exception as e:
         return jsonify({"ok": False, "error": "تعذر الاتصال بـ Ollama المحلي. تأكد من تشغيله عبر الأمر ollama serve."})
-
-import os
 
 if __name__ == '__main__':
     port = int(os.environ.get("PORT", 5000))
