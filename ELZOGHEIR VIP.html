@@ -1,6 +1,11 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
+<!-- إخفاء حواف المتصفح وجعل التطبيق يعمل بشاشة كاملة -->
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0b0e14">  
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ELZOGHEIR VIP — Pro Ultra V3</title>
@@ -412,24 +417,24 @@ p.x{font-size:12px;line-height:1.7;color:var(--mut);margin:10px 0 0}
 <button class="on" data-t="0"><span>📶</span><em data-i="tS"></em></button><button data-t="1"><span>🎓</span><em data-i="tL"></em></button><button data-t="2"><span>👤</span><em data-i="tP"></em></button></div></div>
 
 <script>
-// تم ربط التطبيق مباشرة برابط ngrok الآمن والجاهز للاستخدام من أي مكان
-const API_URL = "https://avert-litter-clobber.ngrok-free.dev";
+// تم ربط التطبيق مباشرة بالسيرفر السحابي الدائم على Render
+const API_URL = "https://elzogheirvip.onrender.com";
 
 const LG={
 en:{mini:"ELZOGHEIR VIP · SCANNER + AUTO-SETTLE",ttl:"↗ Advanced Signal Lab",help:"? Help",note:"V3 Complete: ADX + MTF + BB Engine, 56-Pair Parallel Scanner, and Automated Trade Settlement.",pairsBtn:"Currency Pairs",scanBtn:"⚡ Top Signals",scanTitle:"⚡ Strongest Active Signals Now",scanning:"Scanning 56 pairs…",noTop:"No strong signal right now (market filtered)",searchPh:"Smart search pair (e.g. EUR, JPY, USD)...",noPair:"No matching pair found",exp:"Timeframe",ref:"Get Pro Signal",dt:"Open paper trade",rd:"Engine V3 Readings",of:"of",al:"🔔 Auto-refresh",tS:"Signals",tL:"Learn",tP:"Profile",lrn:"Learn",lsub:"Pro Ultra V3 Guide",bal:"Paper balance",trd:"Trades",wr:"Win rate",btn:"Run backtest",log:"Auto-Settled Trade Log",clrBtn:"Clear Log",rdy:"Ready",tap:"Timeframe {tf} · tap “Get Pro Signal”",press:"Press the button to analyze market data",riskLbl:"Risk %:",
-st:["Fetching live market feed…","Checking Multi-Timeframe (MTF)…","Scanning ADX & Bollinger Bands…","Detecting Candlestick Patterns…","Finalizing Engine V3 Decision…"],dec:"Connected to Engine V3 API",an:"Analyzing",ent:"Valid for",sec:"sec",exr:"Signal expired — refresh",agr:"Signal Strength",w:"weak",m:"medium",s:"strong",BUY:"BUY",SELL:"SELL",WAIT:"WAIT",nod:"Filtered out (No clear edge) — stay out",opn:"Pro Signal: {d} @ {p}",nxt:"Next signal in",run:"open…",sg:"Signals",wn:"Wins",up:"up",dn:"down",trend:"EMA Trend",ema:"MTF Trend",mom:"ADX Strength",rsi:"RSI (14)",mv:"Stochastic",lb:"BB Position",ses:"Price Action",sum:"Signal",pip:"pips",tok:"Tokyo",lon:"London",ny:"New York",syd:"Sydney",
+st:["Fetching live market feed…","Checking Multi-Timeframe (MTF)…","Scanning ADX & Bollinger Bands…","Detecting Candlestick Patterns…","Finalizing Engine V3 Decision…"],dec:"Connected to Cloud Engine V3",an:"Analyzing",ent:"Valid for",sec:"sec",exr:"Signal expired — refresh",agr:"Signal Strength",w:"weak",m:"medium",s:"strong",BUY:"BUY",SELL:"SELL",WAIT:"WAIT",nod:"Filtered out (No clear edge) — stay out",opn:"Pro Signal: {d} @ {p}",nxt:"Next signal in",run:"open…",sg:"Signals",wn:"Wins",up:"up",dn:"down",trend:"EMA Trend",ema:"MTF Trend",mom:"ADX Strength",rsi:"RSI (14)",mv:"Stochastic",lb:"BB Position",ses:"Price Action",sum:"Signal",pip:"pips",tok:"Tokyo",lon:"London",ny:"New York",syd:"Sydney",
 bn:"Filtered Engine V3 backtest ({tf}). Break-even at 92% payout is 52.1%.",
 f_LOW_ADX:"⚠️ Filtered: Sideways Market (ADX < 18)",f_OVERBOUGHT_BB:"⚠️ Filtered: Overbought at Upper BB",f_OVERSOLD_BB:"⚠️ Filtered: Oversold at Lower BB",f_MTF_GUARD:"⚠️ Filtered: Against Higher Timeframe Trend",
 p_PIN_BULL:"Bullish Pin Bar 🔨",p_PIN_BEAR:"Bearish Pin Bar ☄️",p_ENG_BULL:"Bullish Engulfing 🟢",p_ENG_BEAR:"Bearish Engulfing 🔴",p_NEUTRAL:"Normal Candle",
 faq:[["Parallel 56-Pair Scanner","Scans all 56 pairs simultaneously and ranks the highest-conviction setups right now."],["Automated Trade Settlement","Paper trades automatically close after their timeframe expires and update your real balance & win rate."],["Anti-False-Signal Filters","Blocks weak sideways markets (ADX < 18) and Bollinger Band exhaustion zones."]]},
 ar:{mini:"الإصدار الشامل V3 · ماسح الفرص + تسوية آلية",ttl:"↗ مختبر الإشارات الفائق V3",help:"؟ مساعدة",note:"الإصدار الكامل V3: محرك ADX + MTF + BB، ماسح الفرص لـ 56 زوجاً بالتوازي، وحساب نتائج الصفقات تلقائياً.",pairsBtn:"أزواج العملات",scanBtn:"⚡ أقوى الفرص",scanTitle:"⚡ أقوى الإشارات النشطة الآن",scanning:"جارٍ مسح 56 زوجاً بالتوازي…",noTop:"لا توجد إشارات قوية حالياً (تمت فلترة السوق)",searchPh:"بحث ذكي عن زوج العملات (مثال: EUR, JPY, USD)...",noPair:"لا يوجد زوج مطابق للبحث",exp:"الإطار الزمني",ref:"جلب إشارة احترافية",dt:"تسجيل صفقة تجريبية",rd:"قراءات المحرك V3",of:"من",al:"🔔 تحديث تلقائي",tS:"الإشارات",tL:"تعلّم",tP:"الملف",lrn:"تعلّم",lsub:"دليل الإصدار الشامل V3",bal:"الرصيد التجريبي",trd:"الصفقات",wr:"نسبة النجاح",btn:"اختبار رجعي",log:"سجل الصفقات (تسوية آلية للنتائج)",clrBtn:"مسح السجل",rdy:"جاهز",tap:"الإطار {tf} · اضغط «جلب إشارة احترافية»",press:"اضغط الزر لتحليل بيانات السوق",riskLbl:"مخاطر الصفقة (%):",
-st:["جلب بيانات السوق الحية…","فحص اتجاه الفريم الأكبر (MTF)…","فلترة ADX وحدود البولينجر…","قراءة نماذج الشموع اليابانية…","حساب قوة الإشارة النهائية…"],dec:"متصل بالمحرك الشامل V3",an:"جارٍ التحليل الذكي",ent:"صالحة لمدة",sec:"ث",exr:"انتهت صلاحية الإشارة — حدّثها",agr:"نسبة قوة الإشارة",w:"ضعيفة",m:"متوسطة",s:"قوية",BUY:"شراء",SELL:"بيع",WAIT:"انتظار",nod:"تم حجب الإشارة لحماية رأس المال — ابقَ خارج السوق",opn:"إشارة احترافية: {d} عند سعر {p}",nxt:"التحديث التالي خلال",run:"مفتوحة…",sg:"الإشارات",wn:"الرابحة",up:"صاعد",dn:"هابط",trend:"اتجاه EMA",ema:"تأكيد الفريم الأكبر",mom:"قوة الاتجاه ADX",rsi:"مؤشر RSI",mv:"مؤشر Stochastic",lb:"موقع البولينجر",ses:"سلوك الشمعة",sum:"القرار",pip:"نقطة",tok:"طوكيو",lon:"لندن",ny:"نيويورك",syd:"سيدني",
+st:["جلب بيانات السوق الحية…","فحص اتجاه الفريم الأكبر (MTF)…","فلترة ADX وحدود البولينجر…","قراءة نماذج الشموع اليابانية…","حساب قوة الإشارة النهائية…"],dec:"متصل بالسيرفر السحابي V3",an:"جارٍ التحليل الذكي",ent:"صالحة لمدة",sec:"ث",exr:"انتهت صلاحية الإشارة — حدّثها",agr:"نسبة قوة الإشارة",w:"ضعيفة",m:"متوسطة",s:"قوية",BUY:"شراء",SELL:"بيع",WAIT:"انتظار",nod:"تم حجب الإشارة لحماية رأس المال — ابقَ خارج السوق",opn:"إشارة احترافية: {d} عند سعر {p}",nxt:"التحديث التالي خلال",run:"مفتوحة…",sg:"الإشارات",wn:"الرابحة",up:"صاعد",dn:"هابط",trend:"اتجاه EMA",ema:"تأكيد الفريم الأكبر",mom:"قوة الاتجاه ADX",rsi:"مؤشر RSI",mv:"مؤشر Stochastic",lb:"موقع البولينجر",ses:"سلوك الشمعة",sum:"القرار",pip:"نقطة",tok:"طوكيو",lon:"لندن",ny:"نيويورك",syd:"سيدني",
 bn:"نتيجة الاختبار المفلتر ({tf}). نقطة التعادل هي 52.1%.",
 f_LOW_ADX:"⚠️ محجوبة: سوق عرضي ضعيف (ADX < 18)",f_OVERBOUGHT_BB:"⚠️ محجوبة: تشبع شرائي عند قمة البولينجر",f_OVERSOLD_BB:"⚠️ محجوبة: تشبع بيعي عند قاع البولينجر",f_MTF_GUARD:"⚠️ محجوبة: عكس اتجاه الفريم الزمني الأكبر",
 p_PIN_BULL:"شمعة بين بار شرائية 🔨",p_PIN_BEAR:"شمعة بين بار بيعية ☄️",p_ENG_BULL:"ابتلاع شرائي 🟢",p_ENG_BEAR:"ابتلاع بيعي 🔴",p_NEUTRAL:"شمعة عادية",
 faq:[["ماسح الفرص لـ 56 زوجاً","يفحص جميع الأزواج بالتوازي خلال ثوانٍ ويعرض لك أقوى 5 فرص متاحة حالياً."],["تسوية الصفقات وحساب الأرباح تلقائياً","بعد انتهاء وقت الصفقة التجريبية، يقارن البوت سعر الإغلاق ويضيف الربح أو الخسارة لرصيدك ونسبة نجاحك."],["فلاتر منع الإشارات الكاذبة","يمنع الدخول في السوق العرضي (ADX < 18) أو عند وصول السعر لحدود البولينجر المتطرفة."]]},
 ru:{mini:"PRO ULTRA V3 · СКАНЕР + АВТО-РАСЧЕТ",ttl:"↗ Сигнальная лаборатория V3",help:"? Помощь",note:"V3: Фильтры ADX + MTF + BB, сканер 56 пар и автоматический расчет сделок.",pairsBtn:"Валютные пары",scanBtn:"⚡ Топ сигналы",scanTitle:"⚡ Сильнейшие сигналы сейчас",scanning:"Сканирование 56 пар…",noTop:"Сильных сигналов сейчас нет",searchPh:"Умный поиск пары (EUR, JPY)...",noPair:"Пара не найдена",exp:"Таймфрейм",ref:"Получить сигнал",dt:"Демо-сделка",rd:"Показатели V3",of:"из",al:"🔔 Автообновление",tS:"Сигналы",tL:"Обучение",tP:"Профиль",lrn:"Обучение",lsub:"Гид V3",bal:"Баланс",trd:"Сделки",wr:"Процент побед",btn:"Бэктест",log:"Журнал сделок",clrBtn:"Очистить",rdy:"Готово",tap:"Таймфрейм {tf}",press:"Нажмите кнопку",riskLbl:"Риск (%):",
-st:["Загрузка…","Анализ MTF…","Фильтр ADX…","Свечи…","Итог…"],dec:"API V3",an:"Анализ",ent:"Активен",sec:"сек",exr:"Устарел",agr:"Сила сигнала",w:"слабый",m:"средний",s:"сильный",BUY:"ПОКУПКА",SELL:"ПРОДАЖА",WAIT:"ЖДАТЬ",nod:"Сигнал отфильтрован",opn:"Сигнал: {d} @ {p}",nxt:"Через",run:"открыта…",sg:"Сигналов",wn:"Побед",up:"вверх",dn:"вниз",trend:"EMA",ema:"MTF тренд",mom:"ADX",rsi:"RSI",mv:"Stochastic",lb:"Bollinger %",ses:"Свеча",sum:"Итог",pip:"пп",tok:"Токио",lon:"Лондон",ny:"Нью-Йорк",syd:"Сидней",
+st:["Загрузка…","Анализ MTF…","Фильтр ADX…","Свечи…","Итог…"],dec:"Cloud API V3",an:"Анализ",ent:"Активен",sec:"сек",exr:"Устарел",agr:"Сила сигнала",w:"слабый",m:"средний",s:"сильный",BUY:"ПОКУПКА",SELL:"ПРОДАЖА",WAIT:"ЖДАТЬ",nod:"Сигнал отфильтрован",opn:"Сигнал: {d} @ {p}",nxt:"Через",run:"открыта…",sg:"Сигналов",wn:"Побед",up:"вверх",dn:"вниз",trend:"EMA",ema:"MTF тренд",mom:"ADX",rsi:"RSI",mv:"Stochastic",lb:"Bollinger %",ses:"Свеча",sum:"Итог",pip:"пп",tok:"Токио",lon:"Лондон",ny:"Нью-Йорк",syd:"Сидней",
 bn:"Бэктест V3 ({tf}).",
 f_LOW_ADX:"⚠️ Фильтр: флэт (ADX < 18)",f_OVERBOUGHT_BB:"⚠️ Фильтр: перекупленность BB",f_OVERSOLD_BB:"⚠️ Фильтр: перепроданность BB",f_MTF_GUARD:"⚠️ Фильтр: против тренда MTF",
 p_PIN_BULL:"Бычий Пин-бар 🔨",p_PIN_BEAR:"Медвежий Пин-бар ☄️",p_ENG_BULL:"Бычье поглощение 🟢",p_ENG_BEAR:"Медвежье поглощение 🔴",p_NEUTRAL:"Обычная свеча",
@@ -710,7 +715,7 @@ $("go").onclick=async()=>{
     apiRes = await resp.json();
     if(!apiRes.ok) throw new Error(apiRes.error || "Server Error");
   } catch (err) {
-    showErr("تعذر الاتصال بخادم بايثون الفائق! تأكد من تشغيل الخادم. (" + err.message + ")");
+    showErr("تعذر الاتصال بالسيرفر السحابي! انتظر 50 ثانية إذا كان في وضع السكون المجاني ثم أعد المحاولة. (" + err.message + ")");
     busy=false;$("go").disabled=false;idle();
     return;
   }
