@@ -22,9 +22,6 @@ try:
     import yfinance as yf
 except ImportError:
     raise SystemExit("Missing package: pip install yfinance pandas numpy flask flask-cors requests")
-@app.route('/')
-def home():
-    return {"status": "online", "app": "ELZOGHEIR VIP API"}, 200
 app = Flask(__name__)
 CORS(app)
 
